@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plus0" xml:space="preserve">
+    <value>عملیات موفق می باشد</value>
+  </data>
+  <data name="plus1" xml:space="preserve">
+    <value>صادرکننده ي کارت از انجام تراکنش صرف نظر کرد.</value>
+  </data>
+  <data name="plus10" xml:space="preserve">
+    <value>تراکنش با مبلغی پایین تر از مبلغ درخواستی )کمبود حساب مشتري ( پذیرفته شده است</value>
+  </data>
+  <data name="plus12" xml:space="preserve">
+    <value>تراکنش نامعتبر است</value>
+  </data>
+  <data name="plus13" xml:space="preserve">
+    <value>مبلغ تراکنش نادرست است</value>
+  </data>
+  <data name="plus14" xml:space="preserve">
+    <value>شماره کارت ارسالی نامعتبر است (وجود ندارد)</value>
+  </data>
+  <data name="plus15" xml:space="preserve">
+    <value>صادرکننده ي کارت نامعتبراست (وجود ندارد)</value>
+  </data>
+  <data name="plus17" xml:space="preserve">
+    <value>مشتري درخواست کننده حذف شده است</value>
+  </data>
+  <data name="plus2" xml:space="preserve">
+    <value>عملیات تاییدیه این تراکنش قبلا باموفقیت صورت پذیرفته است.</value>
+  </data>
+  <data name="plus3" xml:space="preserve">
+    <value>پذیرنده ي فروشگاهی نامعتبر می باشد</value>
+  </data>
+  <data name="plus5" xml:space="preserve">
+    <value>از انجام تراکنش صرف نظر شد</value>
+    <comment>`</comment>
+  </data>
+  <data name="plus6" xml:space="preserve">
+    <value>بروز خطایی ناشناخته</value>
+  </data>
+  <data name="plus8" xml:space="preserve">
+    <value>باتشخیص هویت دارنده ي کارت، تراکنش موفق میباشد.</value>
+  </data>
+  <data name="plus80" xml:space="preserve">
+    <value>درخواست تراکنش رد شده است</value>
+  </data>
+  <data name="plus81" xml:space="preserve">
+    <value>کارت پذیرفته نشد</value>
+  </data>
+  <data name="plus9" xml:space="preserve">
+    <value>درخواست رسیده در حال پی گیري و انجام میباشد.</value>
+  </data>
+  <data name="_1" xml:space="preserve">
+    <value>خطاي سرور</value>
+  </data>
+  <data name="_100" xml:space="preserve">
+    <value>پذیرنده غیرفعال می باشد</value>
+  </data>
+  <data name="_101" xml:space="preserve">
+    <value>پذیرنده اهراز هویت نشد</value>
+  </data>
+  <data name="_102" xml:space="preserve">
+    <value>تراکنش با موفقیت برگشت داده شد</value>
+  </data>
+  <data name="_103" xml:space="preserve">
+    <value>قابلیت خرید براي پذیرنده غیر فعال می باشد</value>
+  </data>
+  <data name="_104" xml:space="preserve">
+    <value>قابلیت پرداخت قبض براي پذیرنده غیر فعال می باشد.</value>
+  </data>
+  <data name="_105" xml:space="preserve">
+    <value>قابلیت تاپ آپ براي پذیرنده غیر فعال میباشد.</value>
+  </data>
+  <data name="_106" xml:space="preserve">
+    <value>قابلیت شارژ براي پذیرنده غیر فعال می باشد</value>
+  </data>
+  <data name="_107" xml:space="preserve">
+    <value>قابلیت ارسال تاییده تراکنش براي پذیرنده غیرفعال میباشد.</value>
+  </data>
+  <data name="_108" xml:space="preserve">
+    <value>قابلیت برگشت تراکنش براي پذیرنده غیر فعال میباشد</value>
+  </data>
+  <data name="_111" xml:space="preserve">
+    <value>مبلغ تراکنش بیش از حد مجاز پذیرنده میباشد.</value>
+  </data>
+  <data name="_112" xml:space="preserve">
+    <value>شماره سفارش تکراري است</value>
+  </data>
+  <data name="_113" xml:space="preserve">
+    <value>پارامتر ورودي خالی می باشد</value>
+  </data>
+  <data name="_114" xml:space="preserve">
+    <value>شناسه قبض نامعتبر می باشد</value>
+  </data>
+  <data name="_115" xml:space="preserve">
+    <value>شناسه پرداخت نامعتبر می باشد</value>
+  </data>
+  <data name="_116" xml:space="preserve">
+    <value>طول رشته بیش از حد مجاز می باشد</value>
+  </data>
+  <data name="_117" xml:space="preserve">
+    <value>طول رشته کم تر از حد مجاز می باشد</value>
+  </data>
+  <data name="_118" xml:space="preserve">
+    <value>مقدار ارسال شده عدد نمی باشد</value>
+  </data>
+  <data name="_119" xml:space="preserve">
+    <value>سازمان نامعتبر می باشد</value>
+  </data>
+  <data name="_120" xml:space="preserve">
+    <value>طول داده ورودي معتبر نمی باشد</value>
+  </data>
+  <data name="_121" xml:space="preserve">
+    <value>رشته داده شده بطور کامل عددي نمی باشد</value>
+  </data>
+  <data name="_126" xml:space="preserve">
+    <value>کد شناسایی پذیرنده معتبر نمی باشد</value>
+  </data>
+  <data name="_127" xml:space="preserve">
+    <value>آدرس اینترنتی معتبر نمی باشد</value>
+  </data>
+  <data name="_128" xml:space="preserve">
+    <value>قالب آدرس آی پی نامعتبر است.</value>
+  </data>
+  <data name="_130" xml:space="preserve">
+    <value>زمان توکن منقضی شده است.</value>
+  </data>
+  <data name="_131" xml:space="preserve">
+    <value>توکن نامعتبر</value>
+  </data>
+  <data name="_132" xml:space="preserve">
+    <value>مبلغ تراکنش کمتر از حداقل مجاز میباشد</value>
+  </data>
+  <data name="_1505" xml:space="preserve">
+    <value>تایید تراکنش توسط پذیرنده انجام شد</value>
+  </data>
+  <data name="_1507" xml:space="preserve">
+    <value>تراکنش برگشت به سوئیچ ارسال شد</value>
+  </data>
+  <data name="_1527" xml:space="preserve">
+    <value>انجام عملیات درخواست پرداخت تراکنش ناموفق بود.</value>
+  </data>
+  <data name="_1528" xml:space="preserve">
+    <value>اطلاعات پرداخت یافت نشد</value>
+  </data>
+  <data name="_1530" xml:space="preserve">
+    <value>پذیرنده مجاز به تایید این تراکنش نمی باشد</value>
+  </data>
+  <data name="_1531" xml:space="preserve">
+    <value>تایید تراکنش ناموفق امکان پذیر نمی باشد</value>
+  </data>
+  <data name="_1532" xml:space="preserve">
+    <value>تراکنش از سوي پذیرنده تایید شد</value>
+  </data>
+  <data name="_1533" xml:space="preserve">
+    <value>تراکنش قبلاً تایید شده است</value>
+  </data>
+  <data name="_1536" xml:space="preserve">
+    <value>فراخوانی سرویس درخواست شارژ تاپ آپ ناموفق بود.</value>
+  </data>
+  <data name="_1540" xml:space="preserve">
+    <value>تایید تراکنش ناموفق می باشد</value>
+  </data>
+  <data name="_1548" xml:space="preserve">
+    <value>فراخوانی سرویس درخواست پرداخت قبض ناموفق بود</value>
+  </data>
+  <data name="_1549" xml:space="preserve">
+    <value>زمان مجاز براي درخواست برگشت تراکنش به اتمام رسیده است.</value>
+  </data>
+  <data name="_1550" xml:space="preserve">
+    <value>برگشت تراکنش در وضعیت جاري امکان پذیر نمی باشد</value>
+  </data>
+  <data name="_1551" xml:space="preserve">
+    <value>برگشت تراکنش قبلا اًنجام شده است</value>
+  </data>
+  <data name="_1552" xml:space="preserve">
+    <value>برگشت تراکنش مجاز نمی باشد</value>
+  </data>
+  <data name="_32768" xml:space="preserve">
+    <value>خطاي ناشناخته رخ داده است</value>
+  </data>
+</root>

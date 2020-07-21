@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://token.ws.web.cnpg/" targetNamespace="http://token.ws.web.cnpg/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="reservation" type="tns:reservation" />
+  <xs:element name="reservationResponse" type="tns:reservationResponse" />
+  <xs:complexType name="reservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Token_param" type="tns:tokenDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tokenDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AMOUNT" type="xs:string" />
+      <xs:element minOccurs="0" name="CRN" type="xs:string" />
+      <xs:element minOccurs="0" name="MID" type="xs:string" />
+      <xs:element minOccurs="0" name="REFERALADRESS" type="xs:string" />
+      <xs:element minOccurs="0" name="SIGNATURE" type="xs:string" />
+      <xs:element minOccurs="0" name="TID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reservationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tokenResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tokenResponse">
+    <xs:sequence>
+      <xs:element name="result" type="xs:int" />
+      <xs:element minOccurs="0" name="signature" type="xs:string" />
+      <xs:element minOccurs="0" name="token" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.s2m.messaging/" targetNamespace="http://ws.s2m.messaging/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sendConfirmation" type="tns:sendConfirmation" />
+  <xs:element name="sendConfirmationResponse" type="tns:sendConfirmationResponse" />
+  <xs:complexType name="sendConfirmation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SaleConf_req" type="tns:confirmationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="confirmationDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:requestMessageSpec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CRN" type="xs:string" />
+          <xs:element minOccurs="0" name="MID" type="xs:string" />
+          <xs:element minOccurs="0" name="SIGNATURE" type="xs:string" />
+          <xs:element minOccurs="0" name="TRN" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="requestMessageSpec" abstract="true">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="sendConfirmationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:saleConfResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="saleConfResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:generalResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AMOUNT" type="xs:string" />
+          <xs:element minOccurs="0" name="REPETETIVE" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="generalResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:responseMessageSpec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AIR" type="xs:string" />
+          <xs:element minOccurs="0" name="DATE" type="xs:string" />
+          <xs:element minOccurs="0" name="RESCODE" type="xs:string" />
+          <xs:element minOccurs="0" name="SIGNATURE" type="xs:string" />
+          <xs:element minOccurs="0" name="STAN" type="xs:string" />
+          <xs:element minOccurs="0" name="TIME" type="xs:string" />
+          <xs:element minOccurs="0" name="TRN" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="responseMessageSpec" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="successful" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

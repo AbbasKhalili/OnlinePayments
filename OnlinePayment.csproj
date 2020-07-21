@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56AE316E-BCEA-4786-9161-8F99F49EBEE1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlinePayment</RootNamespace>
+    <AssemblyName>OnlinePayment</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsanPardakht\AES.cs" />
+    <Compile Include="AsanPardakht\AsanPardakhtGateway.cs" />
+    <Compile Include="AsanPardakht\AsanPardakhtResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsanPardakhtResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BehPardakht\BehPardakhtGateway.cs" />
+    <Compile Include="BehPardakht\BehPardakhtResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BehPardakhtResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FillRequiredFields.cs" />
+    <Compile Include="IranKish\IranKishGateway.cs" />
+    <Compile Include="IVisitor.cs" />
+    <Compile Include="MabnaCard\MabnaCardGateway.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentFactory.cs" />
+    <Compile Include="MabnaCard\MabnaCardResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MabnaCardResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SadadSwitch1\Calculate.cs" />
+    <Compile Include="SadadSwitch1\SadadResourceSwitch1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SadadResourceSwitch1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SadadSwitch1\SadadSwitch1Gateway.cs" />
+    <Compile Include="Sadad\PayResultData.cs" />
+    <Compile Include="Sadad\SadadResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SadadResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sadad\SadadSwitch2Gateway.cs" />
+    <Compile Include="Sadad\VerifyResultData.cs" />
+    <Compile Include="IranKish\IKCResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IKCResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IranKish\IranKishGate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AsanPardakhtService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BehPardakhtWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IranKishTokenWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IranKishVerifyWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MabnaCardTokenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MabnaCardVerifyService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TejaratElecParsianConfirm\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TejaratElecParsianService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TejarateleParsian\TejarateleParsianResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TejarateleParsianResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TejarateleParsian\TejaratParsianGateway.cs" />
+    <Compile Include="Web References\SadadServiceSwitch1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AsanPardakhtService\merchantservices.wsdl" />
+    <None Include="Service References\AsanPardakhtService\OnlinePayment.AsanPardakhtService.RequestOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AsanPardakhtService\OnlinePayment.AsanPardakhtService.RequestReconciliationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AsanPardakhtService\OnlinePayment.AsanPardakhtService.RequestReversalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AsanPardakhtService\OnlinePayment.AsanPardakhtService.RequestVerificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AsanPardakhtService\OnlinePayment.AsanPardakhtService.TransactionDataPackage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AsanPardakhtService\OnlinePayment.AsanPardakhtService.TrxStatusFromLocalInvoiceIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\IPaymentGateway.wsdl" />
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpChargePayRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpCumulativeDynamicPayRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpDynamicPayRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpInquiryRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpPayRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpPosRefundRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpRefundInquiryRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpRefundRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpRefundVerifyRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpReversalRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpSaleReferenceIdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpSettleRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpVerifyRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\OnlinePayment.BehPardakhtWebService.bpVirtualPayRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BehPardakhtWebService\PaymentGatewayImplService.wsdl" />
+    <None Include="Service References\IranKishTokenWS\OnlinePayment.IranKishTokenWS.tokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IranKishTokenWS\service1.wsdl" />
+    <None Include="Service References\IranKishVerifyWebService\OnlinePayment.IranKishVerifyWebService.transactionModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IranKishVerifyWebService\service1.wsdl" />
+    <None Include="Service References\MabnaCardTokenService\OnlinePayment.MabnaCardTokenService.reservationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MabnaCardTokenService\OnlinePayment.MabnaCardTokenService.tokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MabnaCardTokenService\Token.wsdl" />
+    <None Include="Service References\MabnaCardTokenService\TokenService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MabnaCardVerifyService\OnlinePayment.MabnaCardVerifyService.saleConfResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MabnaCardVerifyService\OnlinePayment.MabnaCardVerifyService.sendConfirmationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MabnaCardVerifyService\TransactionReference.wsdl" />
+    <None Include="Service References\MabnaCardVerifyService\TransactionReference.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TejaratElecParsianConfirm\ConfirmService.wsdl" />
+    <None Include="Service References\TejaratElecParsianConfirm\OnlinePayment.TejaratElecParsianConfirm.ClientConfirmResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TejaratElecParsianConfirm\OnlinePayment.TejaratElecParsianConfirm.ConfirmPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TejaratElecParsianService\OnlinePayment.TejaratElecParsianService.ClientPaymentResponseDataBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TejaratElecParsianService\OnlinePayment.TejaratElecParsianService.ClientSaleResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TejaratElecParsianService\OnlinePayment.TejaratElecParsianService.SalePaymentRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TejaratElecParsianService\OnlinePayment.TejaratElecParsianService.UDSalePaymentRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TejaratElecParsianService\SaleService.wsdl" />
+    <None Include="Web References\SadadServiceSwitch1\CheckStatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SadadServiceSwitch1\merchantutility.wsdl" />
+    <None Include="Web References\SadadServiceSwitch1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SadadServiceSwitch1\Transaction.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AsanPardakht\AsanPardakhtResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AsanPardakhtResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BehPardakht\BehPardakhtResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BehPardakhtResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IranKish\IKCResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IKCResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MabnaCard\MabnaCardResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MabnaCardResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SadadSwitch1\SadadResourceSwitch1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SadadResourceSwitch1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sadad\SadadResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SadadResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TejarateleParsian\TejarateleParsianResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TejarateleParsianResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AsanPardakhtService\" />
+    <WCFMetadataStorage Include="Service References\BehPardakhtWebService\" />
+    <WCFMetadataStorage Include="Service References\IranKishTokenWS\" />
+    <WCFMetadataStorage Include="Service References\IranKishVerifyWebService\" />
+    <WCFMetadataStorage Include="Service References\MabnaCardTokenService\" />
+    <WCFMetadataStorage Include="Service References\MabnaCardVerifyService\" />
+    <WCFMetadataStorage Include="Service References\TejaratElecParsianConfirm\" />
+    <WCFMetadataStorage Include="Service References\TejaratElecParsianService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IranKishVerifyWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IranKishVerifyWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IranKishVerifyWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MabnaCardTokenService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MabnaCardTokenService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MabnaCardTokenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MabnaCardVerifyService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MabnaCardVerifyService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MabnaCardVerifyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AsanPardakhtService\merchantservices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AsanPardakhtService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AsanPardakhtService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AsanPardakhtService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://sadad.shaparak.ir/services/MerchantUtility.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SadadServiceSwitch1\</RelPath>
+      <UpdateFromURL>https://sadad.shaparak.ir/services/MerchantUtility.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>OnlinePayment_SadadServiceSwitch1_MerchantUtility</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\SadadServiceSwitch1\merchantutility.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IranKishTokenWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IranKishTokenWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IranKishTokenWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BehPardakhtWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BehPardakhtWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BehPardakhtWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlinePayment.Contract\OnlinePayment.Contract.csproj">
+      <Project>{648a61bd-f29e-4308-a12b-4b249f150169}</Project>
+      <Name>OnlinePayment.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianService\SaleService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianConfirm\ConfirmService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianConfirm\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianConfirm\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TejaratElecParsianConfirm\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

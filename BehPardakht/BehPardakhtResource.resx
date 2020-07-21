@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plus0" xml:space="preserve">
+    <value>تراكنش با موفقيت انجام شد</value>
+  </data>
+  <data name="plus11" xml:space="preserve">
+    <value>شماره كارت نامعتبر است</value>
+  </data>
+  <data name="plus111" xml:space="preserve">
+    <value>صادر كننده كارت نامعتبر است</value>
+  </data>
+  <data name="plus112" xml:space="preserve">
+    <value>خطاي سوييچ صادر كننده كارت</value>
+  </data>
+  <data name="plus113" xml:space="preserve">
+    <value>پاسخي از صادر كننده كارت دريافت نشد</value>
+  </data>
+  <data name="plus114" xml:space="preserve">
+    <value>دارنده كارت مجاز به انجام اين تراكنش نيست</value>
+  </data>
+  <data name="plus12" xml:space="preserve">
+    <value>موجودي كافي نيست</value>
+  </data>
+  <data name="plus13" xml:space="preserve">
+    <value>رمز نادرست است</value>
+  </data>
+  <data name="plus14" xml:space="preserve">
+    <value>تعداد دفعات وارد كردن رمز بيش از حد مجاز است</value>
+  </data>
+  <data name="plus15" xml:space="preserve">
+    <value>كارت نامعتبر است</value>
+  </data>
+  <data name="plus16" xml:space="preserve">
+    <value>دفعات برداشت وجه بيش از حد مجاز است</value>
+  </data>
+  <data name="plus17" xml:space="preserve">
+    <value>كاربر از انجام تراكنش منصرف شده است</value>
+  </data>
+  <data name="plus18" xml:space="preserve">
+    <value>تاريخ انقضاي كارت گذشته است</value>
+  </data>
+  <data name="plus19" xml:space="preserve">
+    <value>مبلغ برداشت وجه بيش از حد مجاز است</value>
+  </data>
+  <data name="plus21" xml:space="preserve">
+    <value>پذيرنده نامعتبر است</value>
+  </data>
+  <data name="plus23" xml:space="preserve">
+    <value>خطاي امنيتي رخ داده است</value>
+  </data>
+  <data name="plus24" xml:space="preserve">
+    <value>اطلاعات كاربري پذيرنده نامعتبر است</value>
+  </data>
+  <data name="plus25" xml:space="preserve">
+    <value>مبلغ نامعتبر است</value>
+  </data>
+  <data name="plus31" xml:space="preserve">
+    <value>پاسخ نامعتبر است</value>
+  </data>
+  <data name="plus32" xml:space="preserve">
+    <value>فرمت اطلاعات وارد شده صحيح نمي باشد</value>
+  </data>
+  <data name="plus33" xml:space="preserve">
+    <value>حساب نامعتبر است</value>
+  </data>
+  <data name="plus34" xml:space="preserve">
+    <value>خطاي سيستمي</value>
+  </data>
+  <data name="plus35" xml:space="preserve">
+    <value>تاريخ نامعتبر است</value>
+  </data>
+  <data name="plus41" xml:space="preserve">
+    <value>شماره درخواست تكراري است</value>
+  </data>
+  <data name="plus412" xml:space="preserve">
+    <value>شناسه قبض نادرست است</value>
+  </data>
+  <data name="plus413" xml:space="preserve">
+    <value>شناسه پرداخت نادرست است</value>
+  </data>
+  <data name="plus414" xml:space="preserve">
+    <value>سازمان صادر كننده قبض نامعتبر است</value>
+  </data>
+  <data name="plus415" xml:space="preserve">
+    <value>زمان جلسه كاري به پايان رسيده است</value>
+  </data>
+  <data name="plus416" xml:space="preserve">
+    <value>خطا در ثبت اطلاعات</value>
+  </data>
+  <data name="plus417" xml:space="preserve">
+    <value>شناسه پرداخت كننده نامعتبر است</value>
+  </data>
+  <data name="plus418" xml:space="preserve">
+    <value>اشكال در تعريف اطلاعات مشتري</value>
+  </data>
+  <data name="plus419" xml:space="preserve">
+    <value>تعداد دفعات ورود اطلاعات از حد مجاز گذشته است</value>
+  </data>
+  <data name="plus42" xml:space="preserve">
+    <value>يافت نشد Sale تراكنش</value>
+  </data>
+  <data name="plus421" xml:space="preserve">
+    <value>نامعتبر است IP</value>
+  </data>
+  <data name="plus43" xml:space="preserve">
+    <value>داده شده است Verify قبلا درخواست</value>
+  </data>
+  <data name="plus44" xml:space="preserve">
+    <value>يافت نشد Verfiy درخواست</value>
+  </data>
+  <data name="plus45" xml:space="preserve">
+    <value>شده است Settle تراكنش</value>
+  </data>
+  <data name="plus46" xml:space="preserve">
+    <value>نشده است Settle تراكنش</value>
+  </data>
+  <data name="plus47" xml:space="preserve">
+    <value>يافت نشد Settle تراكنش</value>
+  </data>
+  <data name="plus48" xml:space="preserve">
+    <value>شده است Reverse تراكنش</value>
+  </data>
+  <data name="plus49" xml:space="preserve">
+    <value>يافت نشد Refund تراكنش</value>
+  </data>
+  <data name="plus51" xml:space="preserve">
+    <value>تراكنش تكراري است</value>
+  </data>
+  <data name="plus54" xml:space="preserve">
+    <value>تراكنش مرجع موجود نيست</value>
+  </data>
+  <data name="plus55" xml:space="preserve">
+    <value>تراكنش نامعتبر است</value>
+  </data>
+  <data name="plus61" xml:space="preserve">
+    <value>خطا در واريز</value>
+  </data>
+</root>

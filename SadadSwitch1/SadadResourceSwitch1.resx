@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="plus0" xml:space="preserve">
+    <value>تراکنش با موفقیت انجام شد.</value>
+  </data>
+  <data name="plus1" xml:space="preserve">
+    <value>لطفا با بانک صادر کننده کارت، تماس حاصل فرمائيد</value>
+  </data>
+  <data name="plus1000" xml:space="preserve">
+    <value>ترتيب پارامترهای ارسالی اشتباه می باشد، لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند</value>
+  </data>
+  <data name="plus1001" xml:space="preserve">
+    <value>لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند،پارامترهای پرداخت اشتباه می باشد</value>
+  </data>
+  <data name="plus1002" xml:space="preserve">
+    <value>خطا در سيستم تراکنش ناموفق</value>
+  </data>
+  <data name="plus1003" xml:space="preserve">
+    <value>IP پذیرنده اشتباه است.لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند</value>
+  </data>
+  <data name="plus1004" xml:space="preserve">
+    <value>لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند،شماره پذیرنده اشتباه است</value>
+  </data>
+  <data name="plus1005" xml:space="preserve">
+    <value>خطای دسترسی:لطفا بعدا تلاش فرمایيد</value>
+  </data>
+  <data name="plus1006" xml:space="preserve">
+    <value>خطا در سيستم</value>
+  </data>
+  <data name="plus1011" xml:space="preserve">
+    <value>درخواست تكراری شماره سفارش تكراری می باشد</value>
+  </data>
+  <data name="plus1012" xml:space="preserve">
+    <value>اطلاعات پذیرنده صحيح نيست،یكی از موارد تاریخ،زمان یا کليد تراکنش اشتباه است.لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند</value>
+  </data>
+  <data name="plus1015" xml:space="preserve">
+    <value>پاسخ خطای نامشخص از سمت مرکز</value>
+  </data>
+  <data name="plus1016" xml:space="preserve">
+    <value>پرداخت با کارتهای شتاب غير فعال شده است</value>
+  </data>
+  <data name="plus1017" xml:space="preserve">
+    <value>مبلغ درخواستی شما جهت پرداخت از حد مجاز تعریف شده برای این پذیرنده بيشتر است</value>
+  </data>
+  <data name="plus1018" xml:space="preserve">
+    <value>اشكال در تاریخ و زمان سيستم. لطفا تاریخ و زمان سرور خود را با بانک هماهنگ نمایيد</value>
+  </data>
+  <data name="plus1019" xml:space="preserve">
+    <value>امكان پرداخت از طریق سيستم شتاب برای این پذیرنده امكان پذیر نيست</value>
+  </data>
+  <data name="plus1020" xml:space="preserve">
+    <value>پذیرنده غيرفعال شده است.لطفا جهت فعال سازی با بانک تماس بگيرید</value>
+  </data>
+  <data name="plus1022" xml:space="preserve">
+    <value>آدرس ورودی جهت پرداخت با آدرس بازگشت پذیرنده مطابقت ندارد</value>
+  </data>
+  <data name="plus1023" xml:space="preserve">
+    <value>آدرس بازگشت پذیرنده نامعتبر است</value>
+  </data>
+  <data name="plus1024" xml:space="preserve">
+    <value>مهر زمانی پذیرنده نامعتبر است</value>
+  </data>
+  <data name="plus1025" xml:space="preserve">
+    <value>امضا تراکنش نامعتبر است</value>
+  </data>
+  <data name="plus1026" xml:space="preserve">
+    <value>شماره سفارش تراکنش نامعتبر است</value>
+  </data>
+  <data name="plus1027" xml:space="preserve">
+    <value>شماره پذیرنده نامعتبر است</value>
+  </data>
+  <data name="plus1028" xml:space="preserve">
+    <value>شماره ترمينال پذیرنده نامعتبر است</value>
+  </data>
+  <data name="plus1029" xml:space="preserve">
+    <value>آدرس IP پرداخت در محدوده آدرس های معتبر اعلام شده توسط پذیرنده نيست .لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند</value>
+  </data>
+  <data name="plus1030" xml:space="preserve">
+    <value>آدرس Domain پرداخت در محدوده آدرس های معتبر اعلام شده توسط پذیرنده نيست .لطفا مسئول فنی پذیرنده با بانک تماس حاصل فرمایند</value>
+  </data>
+  <data name="plus1031" xml:space="preserve">
+    <value>مهلت زمانی شما جهت پرداخت به پایان رسيده است.لطفا مجددا سعی بفرمایيد</value>
+  </data>
+  <data name="plus1032" xml:space="preserve">
+    <value>پرداخت با این کارت . برای پذیرنده مورد نظر شما امكان پذیر نيست.لطفا از کارتهای مجاز که توسط پذیرنده معرفی شده است . استفاده نمایيد.</value>
+  </data>
+  <data name="plus1033" xml:space="preserve">
+    <value>به علت مشكل در سایت پذیرنده. پرداخت برای این پذیرنده غيرفعال شده است.لطفا مسوول فنی سایت پذیرنده با بانک تماس حاصل فرمایند.</value>
+  </data>
+  <data name="plus1036" xml:space="preserve">
+    <value>اطلاعات اضافی ارسال نشده یا دارای اشكال است</value>
+  </data>
+  <data name="plus1037" xml:space="preserve">
+    <value>شماره پذیرنده یا شماره ترمينال پذیرنده صحيح نميباشد</value>
+  </data>
+  <data name="plus1053" xml:space="preserve">
+    <value>خطا: درخواست معتبر، از سمت پذیرنده صورت نگرفته است لطفا اطلاعات پذیرنده خود را چک کنيد.</value>
+  </data>
+  <data name="plus1055" xml:space="preserve">
+    <value>مقدار غيرمجاز در ورود اطلاعات</value>
+  </data>
+  <data name="plus1056" xml:space="preserve">
+    <value>سيستم موقتا قطع ميباشد.لطفا بعدا تلاش فرمایيد.</value>
+  </data>
+  <data name="plus1057" xml:space="preserve">
+    <value>قبلا تراکنش مورد نظر بصورت موفق انجام شده است</value>
+  </data>
+  <data name="plus1058" xml:space="preserve">
+    <value>سرویس پرداخت اینترنتی خارج از سرویس می باشد.لطفا بعدا سعی بفرمایيد.</value>
+  </data>
+  <data name="plus1061" xml:space="preserve">
+    <value>اشكال در توليد کد یكتا. لطفا مرورگر خود را بسته و با اجرای مجدد مرورگر عمليات پرداخت را انجام دهيد</value>
+  </data>
+  <data name="plus1063" xml:space="preserve">
+    <value>سرویس پرداخت اینترنتی بعلت انجام عمليات بانكی موقتا خارج از سرویس است.لطفا بعدا سعی بفرمایيد</value>
+  </data>
+  <data name="plus1064" xml:space="preserve">
+    <value>لطفا مجددا سعی بفرمایيد</value>
+  </data>
+  <data name="plus1065" xml:space="preserve">
+    <value>ارتباط ناموفق .لطفا چند لحظه دیگر مجددا سعی کنيد</value>
+  </data>
+  <data name="plus1066" xml:space="preserve">
+    <value>سيستم سرویس دهی پرداخت موقتا غير فعال شده است</value>
+  </data>
+  <data name="plus1068" xml:space="preserve">
+    <value>با عرض پوزش به علت بروزرسانی . سيستم موقتا قطع ميباشد</value>
+  </data>
+  <data name="plus1070" xml:space="preserve">
+    <value>شماره کارت خاص ارسالی از طرف پذیرنده جهت پرداخت شما نامعتبر است.لطفا با پذیرنده تماس حاصل فرمایيد.</value>
+  </data>
+  <data name="plus1071" xml:space="preserve">
+    <value>شماره کارت شما به عنوان کارت خاص از سوی پذیرنده اعلام شده است و پرداخت مستقيم از طریف این کارت امكان پذیر نيست.</value>
+  </data>
+  <data name="plus1072" xml:space="preserve">
+    <value>خطا در پردازش پارامترهای اختياری پذیرنده</value>
+  </data>
+  <data name="plus1073" xml:space="preserve">
+    <value>آدرس ایميل نامعتبر است</value>
+  </data>
+  <data name="plus1080" xml:space="preserve">
+    <value>عبارت وارد شده با متن موجود در تصویر یكسان نمی باشد.</value>
+  </data>
+  <data name="plus14" xml:space="preserve">
+    <value>شماره کارت شناخته شده نيست</value>
+  </data>
+  <data name="plus23" xml:space="preserve">
+    <value>پذیرنده کارت فعال نيست لطفا با بخش امور پذیرندگان، تماس حاصل فرمائيد</value>
+  </data>
+  <data name="plus3" xml:space="preserve">
+    <value>پذیرنده کارت فعال نيست لطفا با بخش امور پذیرندگان، تماس حاصل فرمائيد</value>
+  </data>
+  <data name="plus31" xml:space="preserve">
+    <value>پذیرنده توسط سوئيچ پشتيبانی نمی شود</value>
+  </data>
+  <data name="plus33" xml:space="preserve">
+    <value>کارت شما منقضی شده است لطفا برای کارت جدید به شعبه مراجعه فرمائيد</value>
+  </data>
+  <data name="plus38" xml:space="preserve">
+    <value>تعداد دفعات ورود رمز نادرست بيش از حد مجاز است. لطفا از طریق خودپرداز بانک صادرکننده کارت نسبت به تخصيص رمز دوم جدید اقدام نمایيد.</value>
+  </data>
+  <data name="plus41" xml:space="preserve">
+    <value>کارت مفقوده می باشد لطفا به شعبه خود، مراجعه فرمائيد</value>
+  </data>
+  <data name="plus43" xml:space="preserve">
+    <value>کارت مسروقه می باشد لطفا به شعبه خود، مراجعه فرمائيد</value>
+  </data>
+  <data name="plus44" xml:space="preserve">
+    <value>اطلاعات قبض صحيح نيست</value>
+  </data>
+  <data name="plus48" xml:space="preserve">
+    <value>این قبض قبلا پرداخت شده است</value>
+  </data>
+  <data name="plus51" xml:space="preserve">
+    <value>مبلغ درخواستی از موجودی حساب شما، بيشتر است . حداقل مانده حساب شما پس از عمليات پرداخت باید 100،000 ریال باشد.</value>
+  </data>
+  <data name="plus52" xml:space="preserve">
+    <value>شماره حساب نامعتبر است</value>
+  </data>
+  <data name="plus54" xml:space="preserve">
+    <value>تاریخ انقضای کارت سپری شده است</value>
+  </data>
+  <data name="plus55" xml:space="preserve">
+    <value>رمز کارت صحيح نمی باشد لطفا مجددا، سعی فرمائيد</value>
+  </data>
+  <data name="plus56" xml:space="preserve">
+    <value>کارت نامعتبر است</value>
+  </data>
+  <data name="plus57" xml:space="preserve">
+    <value>دارنده کارت مجاز به انجام این تراکنش نمی باشد</value>
+  </data>
+  <data name="plus58" xml:space="preserve">
+    <value>انجام تراکنش مربوطه توسط پایانه ی انجام دهنده مجاز نمی باشد .</value>
+  </data>
+  <data name="plus61" xml:space="preserve">
+    <value>مبلغ تراکنش از حد مجاز بالاتر است</value>
+  </data>
+  <data name="plus62" xml:space="preserve">
+    <value>کارت محدود شده است</value>
+  </data>
+  <data name="plus65" xml:space="preserve">
+    <value>تعداد دفعات تراکنش از حد مجاز بيشتر است</value>
+  </data>
+  <data name="plus75" xml:space="preserve">
+    <value>ورود رمز دوم کارت از حد مجاز گذشته است. انجام تراکنش اینترنتی از کارت شما امكان پذیر نمی باشد، لطفا با مراجعه به خودپرداز مجددا رمز اینترنتی دریافت فرمائيد</value>
+  </data>
+  <data name="plus77" xml:space="preserve">
+    <value>روز مالی تراکنش نا معتبر است یا مهلت زمان ارسال اصلاحيه به پایان رسيده است .</value>
+  </data>
+  <data name="plus78" xml:space="preserve">
+    <value>کارت غير فعال میباشد</value>
+  </data>
+  <data name="plus79" xml:space="preserve">
+    <value>حساب متصل به کارت نا معتبر است یا دارای اشكال است</value>
+  </data>
+  <data name="plus83" xml:space="preserve">
+    <value>ارائه دهنده ی خدمات پرداخت یا سامانه شاپرک اعلام Sign Off نموده است . ، لطفا چند دقيقه دیگر مجددا سعی بفرمائيد</value>
+  </data>
+  <data name="plus84" xml:space="preserve">
+    <value>وضعيت سامانه ی یا بانک مقصد تراکنش غيرفعال می باشد ) Host Down )</value>
+  </data>
+  <data name="plus86" xml:space="preserve">
+    <value>موسسه ارسال کننده شاپرک یا مقصد تراکنش در حالت Sign off است</value>
+  </data>
+  <data name="plus90" xml:space="preserve">
+    <value>سامانه مقصد تراکنش درحال انجام عمليات پایان روز می باشد لطفا چند دقيقه دیگر مجددا سعی بفرمائيد</value>
+  </data>
+  <data name="plus9000" xml:space="preserve">
+    <value>درخواست تراکنش در سيستم ثبت شده ولی تراکنش هنوز شروع نشده است.</value>
+  </data>
+  <data name="plus9001" xml:space="preserve">
+    <value>تراکنش در سيستم ثبت شده و پيام مالی به سيستم بانک ارسال شده است اما هنوز پاسخی دریافت نشده است.</value>
+  </data>
+  <data name="plus9004" xml:space="preserve">
+    <value>سيستم در حال تلاش جهت برگشت تراکنش خرید است.</value>
+  </data>
+  <data name="plus9005" xml:space="preserve">
+    <value>سيستم در حال تلاش جهت برگشت تراکنش خرید است.</value>
+  </data>
+  <data name="plus9006" xml:space="preserve">
+    <value>تراکنش ناموفق بوده و مبلغ با موفقيت به حساب مشتری برگشت خورده است.</value>
+  </data>
+  <data name="plus9008" xml:space="preserve">
+    <value>در هنگام انجام عمليات CheckStatus مشكلی رخ داده است. )در اغلب موارد به دليل وجود اشكال در پارامترهای ارسالی(</value>
+  </data>
+  <data name="plus9009" xml:space="preserve">
+    <value>سيستم در حال تلاش برای دریافت جواب عمليات بانكی است.</value>
+  </data>
+  <data name="plus9010" xml:space="preserve">
+    <value>تراکنش به ليست تراکنشهای برگشت خودکار اضافه شده است و در انتظار برگشت ميباشد.</value>
+  </data>
+  <data name="plus9011" xml:space="preserve">
+    <value>تراکنش برگشت خرید ارسال شده است اما پاسخ دریافت شده قطعی نيست و تراکنش در ليست تراکنشهای معوق ميباشد و نتيجه عمليات بانكی ظرف 24 ساعت آینده مشخص خواهد شد.</value>
+  </data>
+  <data name="plus9012" xml:space="preserve">
+    <value>نتيجه تراکنش معوق پس از 24 ساعت مشخص شده و این تراکنش ناموفق بوده و به حساب مشتری بازگشت داده شده است.</value>
+  </data>
+  <data name="plus91" xml:space="preserve">
+    <value>صادرکننده یا سوئيچ مقصد فعال نمی باشد )مدت زمان انتظار برای دریافت پاسخ پایان یافته است(</value>
+  </data>
+  <data name="plus92" xml:space="preserve">
+    <value>صادر کننده کارت معتبر نيست</value>
+  </data>
+  <data name="plus93" xml:space="preserve">
+    <value>تراکنش با موفقيت انجام نشد )کمبود منابع و نقض موارد قانونی( لطفا چند دقيقه دیگر مجددا سعی بفرمائيد</value>
+  </data>
+  <data name="_1" xml:space="preserve">
+    <value>نتيجه استعلام نامعلوم. پارامترهای ارسالی صحيح نيست و یا تراکنش در سيستم وجود ندارد.</value>
+  </data>
+</root>

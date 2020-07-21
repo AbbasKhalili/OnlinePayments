@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://token.ws.web.cnpg/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Token" targetNamespace="http://token.ws.web.cnpg/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://mabna.shaparak.ir:443/TokenService?xsd=1" namespace="http://token.ws.web.cnpg/" />
+    </xsd:schema>
+  </types>
+  <message name="reservation">
+    <part name="parameters" element="tns:reservation" />
+  </message>
+  <message name="reservationResponse">
+    <part name="parameters" element="tns:reservationResponse" />
+  </message>
+  <portType name="TokenService">
+    <operation name="reservation">
+      <input wsam:Action="http://token.ws.web.cnpg/TokenService/reservationRequest" message="tns:reservation" />
+      <output wsam:Action="http://token.ws.web.cnpg/TokenService/reservationResponse" message="tns:reservationResponse" />
+    </operation>
+  </portType>
+  <binding name="TokenServicePortBinding" type="tns:TokenService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="reservation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Token">
+    <port name="TokenServicePort" binding="tns:TokenServicePortBinding">
+      <soap:address location="https://mabna.shaparak.ir:443/TokenService" />
+    </port>
+  </service>
+</definitions>

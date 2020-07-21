@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:complexType name="CheckStatusResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RefrenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankReciptNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewlyCommitted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="FailCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TraceNo" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShamsiDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RealTransactionDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppStatusDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AppStatusCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHolderAccNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHolderName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTransaction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Transaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MessageTypeId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessingCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountTrans" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTimeSendShetab" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TraceNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimeLocalTrans" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateLocalTrans" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeOfPinInput" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantBankId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueBankId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="RetrivalRefNo" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefrenceNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Response" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TerminalId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardAcqId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardAcqName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantIP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FailCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShamsiDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tblName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationCardHolderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHolderEmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationAccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalData_Transaction_P48" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecondAccNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalData_TransactionLicense" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Line" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillPaymentID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHolderIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantAdditionalData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DestinationPrimaryAccNum" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckRequestStatusWithRealTransactionDateTimeSoapIn">
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="TransactionKey" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusWithRealTransactionDateTimeSoapOut">
+    <wsdl:part name="CheckRequestStatusWithRealTransactionDateTimeResult" type="s:int" />
+    <wsdl:part name="RetrivalRefNo" type="s:string" />
+    <wsdl:part name="AppStatus" type="s:string" />
+    <wsdl:part name="RealTransactionDateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusSoapIn">
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="transactionKey" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusSoapOut">
+    <wsdl:part name="CheckRequestStatusResult" type="s:int" />
+    <wsdl:part name="RetrivalRefNo" type="s:string" />
+    <wsdl:part name="AppStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusExSoapIn">
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusExSoapOut">
+    <wsdl:part name="CheckRequestStatusExResult" type="s:int" />
+    <wsdl:part name="RetrievalRefNo" type="s:string" />
+    <wsdl:part name="AppStatus" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusExWithRealTransactionDateTimeSoapIn">
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusExWithRealTransactionDateTimeSoapOut">
+    <wsdl:part name="CheckRequestStatusExWithRealTransactionDateTimeResult" type="s:int" />
+    <wsdl:part name="RetrievalRefNo" type="s:string" />
+    <wsdl:part name="AppStatus" type="s:string" />
+    <wsdl:part name="RealTransactionDateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusResultSoapIn">
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="TransactionKey" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+  </wsdl:message>
+  <wsdl:message name="CheckRequestStatusResultSoapOut">
+    <wsdl:part name="CheckRequestStatusResultResult" type="tns:CheckStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestStatusResultSoapIn">
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="TransactionKey" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestStatusResultSoapOut">
+    <wsdl:part name="GetRequestStatusResultResult" type="tns:CheckStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthRequestStatusSoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="CardNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthRequestStatusSoapOut">
+    <wsdl:part name="GetAuthRequestStatusResult" type="tns:CheckStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="CheckBatchTransferStatusSoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="CardNum" type="s:string" />
+    <wsdl:part name="Amount" type="s:long" />
+  </wsdl:message>
+  <wsdl:message name="CheckBatchTransferStatusSoapOut">
+    <wsdl:part name="CheckBatchTransferStatusResult" type="tns:CheckStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="CheckBillStatusSoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="TerminalID" type="s:string" />
+    <wsdl:part name="OrderID" type="s:long" />
+    <wsdl:part name="RequestKey" type="s:string" />
+    <wsdl:part name="BillID" type="s:long" />
+    <wsdl:part name="BillPaymentID" type="s:long" />
+  </wsdl:message>
+  <wsdl:message name="CheckBillStatusSoapOut">
+    <wsdl:part name="CheckBillStatusResult" type="tns:CheckStatusResult" />
+  </wsdl:message>
+  <wsdl:message name="GetSpecificMerchantCommitReportByPageNumberSoapIn">
+    <wsdl:part name="Caller_MerchantId" type="s:long" />
+    <wsdl:part name="Caller_TerminalId" type="s:long" />
+    <wsdl:part name="Caller_TimeStamp" type="s:string" />
+    <wsdl:part name="Caller_FP" type="s:string" />
+    <wsdl:part name="MerchantId" type="s:long" />
+    <wsdl:part name="TerminalId" type="s:long" />
+    <wsdl:part name="FromShamsiDate" type="s:string" />
+    <wsdl:part name="ToShamsiDate" type="s:string" />
+    <wsdl:part name="FromHour" type="s:string" />
+    <wsdl:part name="ToHour" type="s:string" />
+    <wsdl:part name="TraceNo" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="OrderId" type="s:string" />
+    <wsdl:part name="PageNumber" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="GetSpecificMerchantCommitReportByPageNumberSoapOut">
+    <wsdl:part name="GetSpecificMerchantCommitReportByPageNumberResult" type="tns:ArrayOfTransaction" />
+    <wsdl:part name="TotalPage" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitReportByPageNumberSoapIn">
+    <wsdl:part name="MerchantId" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+    <wsdl:part name="FromShamsiDate" type="s:string" />
+    <wsdl:part name="ToShamsiDate" type="s:string" />
+    <wsdl:part name="FromHour" type="s:string" />
+    <wsdl:part name="ToHour" type="s:string" />
+    <wsdl:part name="TraceNo" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="OrderId" type="s:string" />
+    <wsdl:part name="PageNumber" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitReportByPageNumberSoapOut">
+    <wsdl:part name="GetCommitReportByPageNumberResult" type="s:string" />
+    <wsdl:part name="TotalPage" type="s:int" />
+    <wsdl:part name="XMLReportSchema" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitReportSoapIn">
+    <wsdl:part name="MerchantId" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+    <wsdl:part name="FromShamsiDate" type="s:string" />
+    <wsdl:part name="ToShamsiDate" type="s:string" />
+    <wsdl:part name="FromHour" type="s:string" />
+    <wsdl:part name="ToHour" type="s:string" />
+    <wsdl:part name="TraceNo" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="OrderId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCommitReportSoapOut">
+    <wsdl:part name="GetCommitReportResult" type="s:string" />
+    <wsdl:part name="XMLReportSchema" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionReportSoapIn">
+    <wsdl:part name="MerchantId" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+    <wsdl:part name="ShamsiDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionReportSoapOut">
+    <wsdl:part name="GetTransactionReportResult" type="s:string" />
+    <wsdl:part name="XMLReportSchema" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionReportByPageNumberSoapIn">
+    <wsdl:part name="MerchantId" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+    <wsdl:part name="ShamsiDate" type="s:string" />
+    <wsdl:part name="PageNumber" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionReportByPageNumberSoapOut">
+    <wsdl:part name="GetTransactionReportByPageNumberResult" type="s:string" />
+    <wsdl:part name="TotalPage" type="s:int" />
+    <wsdl:part name="XMLReportSchema" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionReportWithSettlementDateByPageNumberSoapIn">
+    <wsdl:part name="MerchantId" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="TimeStamp" type="s:string" />
+    <wsdl:part name="FP" type="s:string" />
+    <wsdl:part name="ShamsiDate" type="s:string" />
+    <wsdl:part name="SettlementDate" type="s:string" />
+    <wsdl:part name="PageNumber" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionReportWithSettlementDateByPageNumberSoapOut">
+    <wsdl:part name="GetTransactionReportWithSettlementDateByPageNumberResult" type="s:string" />
+    <wsdl:part name="TotalPage" type="s:int" />
+    <wsdl:part name="XMLReportSchema" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePaymentIDSoapIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GeneratePaymentIDSoapOut">
+    <wsdl:part name="GeneratePaymentIDResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePaymentIDSoapIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePaymentIDSoapOut">
+    <wsdl:part name="ValidatePaymentIDResult" type="s:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GenerateCheckDigitSoapIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateCheckDigitSoapOut">
+    <wsdl:part name="GenerateCheckDigitResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PaymentUtilitySoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+    <wsdl:part name="OrderId" type="s:long" />
+    <wsdl:part name="transactionKey" type="s:string" />
+    <wsdl:part name="TerminalId" type="s:string" />
+    <wsdl:part name="RedirectURL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PaymentUtilitySoapOut">
+    <wsdl:part name="PaymentUtilityResult" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PaymentUtilityAdditionalDataSoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+    <wsdl:part name="OrderId" type="s:long" />
+    <wsdl:part name="transactionKey" type="s:string" />
+    <wsdl:part name="TerminalId" type="s:string" />
+    <wsdl:part name="RedirectURL" type="s:string" />
+    <wsdl:part name="MerchantAdditionalData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PaymentUtilityAdditionalDataSoapOut">
+    <wsdl:part name="PaymentUtilityAdditionalDataResult" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PaymentUtilityOptionalParameterSoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="AmountTrans" type="s:long" />
+    <wsdl:part name="OrderId" type="s:long" />
+    <wsdl:part name="transactionKey" type="s:string" />
+    <wsdl:part name="TerminalId" type="s:string" />
+    <wsdl:part name="RedirectURL" type="s:string" />
+    <wsdl:part name="MerchantAdditionalData" type="s:string" />
+    <wsdl:part name="CustomerEmailAddress" type="s:string" />
+    <wsdl:part name="OptionalPaymentParameter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PaymentUtilityOptionalParameterSoapOut">
+    <wsdl:part name="PaymentUtilityOptionalParameterResult" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentUtilitySoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="OrderId" type="s:long" />
+    <wsdl:part name="transactionKey" type="s:string" />
+    <wsdl:part name="BillList" type="s:string" />
+    <wsdl:part name="TerminalId" type="s:string" />
+    <wsdl:part name="RedirectURL" type="s:string" />
+    <wsdl:part name="MerchantAdditionalData" type="s:string" />
+    <wsdl:part name="CustomerEmailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BillPaymentUtilitySoapOut">
+    <wsdl:part name="BillPaymentUtilityResult" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BatchTransferUtilitySoapIn">
+    <wsdl:part name="CardAcqID" type="s:string" />
+    <wsdl:part name="transactionKey" type="s:string" />
+    <wsdl:part name="CardList" type="s:string" />
+    <wsdl:part name="TerminalId" type="s:string" />
+    <wsdl:part name="RedirectURL" type="s:string" />
+    <wsdl:part name="MerchantAdditionalData" type="s:string" />
+    <wsdl:part name="CustomerEmailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BatchTransferUtilitySoapOut">
+    <wsdl:part name="BatchTransferUtilityResult" type="s:string" />
+    <wsdl:part name="RequestKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalcTimeStampSoapIn" />
+  <wsdl:message name="CalcTimeStampSoapOut">
+    <wsdl:part name="CalcTimeStampResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:portType name="MerchantUtilitySoap">
+    <wsdl:operation name="CheckRequestStatusWithRealTransactionDateTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status and Reference Number Transaction and Complete Commit Transactions And Return Real Transaction DateTime</wsdl:documentation>
+      <wsdl:input message="tns:CheckRequestStatusWithRealTransactionDateTimeSoapIn" />
+      <wsdl:output message="tns:CheckRequestStatusWithRealTransactionDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status and Reference Number Transaction and Complete Commit Transactions</wsdl:documentation>
+      <wsdl:input message="tns:CheckRequestStatusSoapIn" />
+      <wsdl:output message="tns:CheckRequestStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status and Reference Number Transaction and Complete Commit Transactions</wsdl:documentation>
+      <wsdl:input message="tns:CheckRequestStatusExSoapIn" />
+      <wsdl:output message="tns:CheckRequestStatusExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusExWithRealTransactionDateTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status and Reference Number Transaction and Complete Commit Transactions  And Return Real Transaction DateTime</wsdl:documentation>
+      <wsdl:input message="tns:CheckRequestStatusExWithRealTransactionDateTimeSoapIn" />
+      <wsdl:output message="tns:CheckRequestStatusExWithRealTransactionDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status and Reference Number Transaction and Complete Commit Transactions And Return Real Transaction Info</wsdl:documentation>
+      <wsdl:input message="tns:CheckRequestStatusResultSoapIn" />
+      <wsdl:output message="tns:CheckRequestStatusResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestStatusResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status and Reference Number  Transactions And Return Real Transaction Info</wsdl:documentation>
+      <wsdl:input message="tns:GetRequestStatusResultSoapIn" />
+      <wsdl:output message="tns:GetRequestStatusResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthRequestStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status of Bill</wsdl:documentation>
+      <wsdl:input message="tns:GetAuthRequestStatusSoapIn" />
+      <wsdl:output message="tns:GetAuthRequestStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBatchTransferStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status of BatchMoneyTransfer</wsdl:documentation>
+      <wsdl:input message="tns:CheckBatchTransferStatusSoapIn" />
+      <wsdl:output message="tns:CheckBatchTransferStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBillStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Status of Bill</wsdl:documentation>
+      <wsdl:input message="tns:CheckBillStatusSoapIn" />
+      <wsdl:output message="tns:CheckBillStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecificMerchantCommitReportByPageNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get List of Commit Transaction For Custome Merchant</wsdl:documentation>
+      <wsdl:input message="tns:GetSpecificMerchantCommitReportByPageNumberSoapIn" />
+      <wsdl:output message="tns:GetSpecificMerchantCommitReportByPageNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitReportByPageNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get List of Commit Transaction at Specific Condition</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitReportByPageNumberSoapIn" />
+      <wsdl:output message="tns:GetCommitReportByPageNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get List of Commit Transaction at Specific Condition</wsdl:documentation>
+      <wsdl:input message="tns:GetCommitReportSoapIn" />
+      <wsdl:output message="tns:GetCommitReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get List of Merchant Transaction at Specific Date</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionReportSoapIn" />
+      <wsdl:output message="tns:GetTransactionReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReportByPageNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get List of Merchant Transaction at Specific Date</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionReportByPageNumberSoapIn" />
+      <wsdl:output message="tns:GetTransactionReportByPageNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReportWithSettlementDateByPageNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get List of Merchant Transaction at Specific Date on Settlement Date</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionReportWithSettlementDateByPageNumberSoapIn" />
+      <wsdl:output message="tns:GetTransactionReportWithSettlementDateByPageNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePaymentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Generate Payment ID For Branch Payment</wsdl:documentation>
+      <wsdl:input message="tns:GeneratePaymentIDSoapIn" />
+      <wsdl:output message="tns:GeneratePaymentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePaymentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate Payment ID For Branch Payment</wsdl:documentation>
+      <wsdl:input message="tns:ValidatePaymentIDSoapIn" />
+      <wsdl:output message="tns:ValidatePaymentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCheckDigit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Generate Check Digit For Branch Payment</wsdl:documentation>
+      <wsdl:input message="tns:GenerateCheckDigitSoapIn" />
+      <wsdl:output message="tns:GenerateCheckDigitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtility">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This function make HTML Form without Addtional Data</wsdl:documentation>
+      <wsdl:input message="tns:PaymentUtilitySoapIn" />
+      <wsdl:output message="tns:PaymentUtilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtilityAdditionalData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This function make HTML Form with Addtional Data</wsdl:documentation>
+      <wsdl:input message="tns:PaymentUtilityAdditionalDataSoapIn" />
+      <wsdl:output message="tns:PaymentUtilityAdditionalDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtilityOptionalParameter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This function make HTML Form with OptionalParameter</wsdl:documentation>
+      <wsdl:input message="tns:PaymentUtilityOptionalParameterSoapIn" />
+      <wsdl:output message="tns:PaymentUtilityOptionalParameterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentUtility">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This function make bill HTML Form</wsdl:documentation>
+      <wsdl:input message="tns:BillPaymentUtilitySoapIn" />
+      <wsdl:output message="tns:BillPaymentUtilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchTransferUtility">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This function make BatchMoneyTransfer HTML Form</wsdl:documentation>
+      <wsdl:input message="tns:BatchTransferUtilitySoapIn" />
+      <wsdl:output message="tns:BatchTransferUtilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcTimeStamp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get TimeStamp of EPayment Server</wsdl:documentation>
+      <wsdl:input message="tns:CalcTimeStampSoapIn" />
+      <wsdl:output message="tns:CalcTimeStampSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MerchantUtilitySoap" type="tns:MerchantUtilitySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="CheckRequestStatusWithRealTransactionDateTime">
+      <soap:operation soapAction="http://tempuri.org/CheckRequestStatusWithRealTransactionDateTime" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatus">
+      <soap:operation soapAction="http://tempuri.org/CheckRequestStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusEx">
+      <soap:operation soapAction="http://tempuri.org/CheckRequestStatusEx" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusExWithRealTransactionDateTime">
+      <soap:operation soapAction="http://tempuri.org/CheckRequestStatusExWithRealTransactionDateTime" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusResult">
+      <soap:operation soapAction="http://tempuri.org/CheckRequestStatusWithResult" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestStatusResult">
+      <soap:operation soapAction="http://tempuri.org/GetRequestStatusResult" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthRequestStatus">
+      <soap:operation soapAction="http://tempuri.org/GetAuthRequestStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBatchTransferStatus">
+      <soap:operation soapAction="http://tempuri.org/CheckBatchTransferStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBillStatus">
+      <soap:operation soapAction="http://tempuri.org/CheckBillStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecificMerchantCommitReportByPageNumber">
+      <soap:operation soapAction="http://tempuri.org/GetSpecificMerchantCommitReportByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitReportByPageNumber">
+      <soap:operation soapAction="http://tempuri.org/GetCommitReportByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitReport">
+      <soap:operation soapAction="http://tempuri.org/GetCommitReport" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReport">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionReport" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReportByPageNumber">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionReportByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReportWithSettlementDateByPageNumber">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionReportWithSatlementDateByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePaymentID">
+      <soap:operation soapAction="http://tempuri.org/GeneratePaymentID" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePaymentID">
+      <soap:operation soapAction="http://tempuri.org/ValidatePaymentID" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCheckDigit">
+      <soap:operation soapAction="http://tempuri.org/GenerateCheckDigit" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtility">
+      <soap:operation soapAction="http://tempuri.org/PaymentUtility" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtilityAdditionalData">
+      <soap:operation soapAction="http://tempuri.org/PaymentUtilityAdditionalData" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtilityOptionalParameter">
+      <soap:operation soapAction="http://tempuri.org/PaymentUtilityOptionalParameter" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentUtility">
+      <soap:operation soapAction="http://tempuri.org/BillPaymentUtility" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchTransferUtility">
+      <soap:operation soapAction="http://tempuri.org/BatchTransferUtility" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcTimeStamp">
+      <soap:operation soapAction="http://tempuri.org/CalcTimeStamp" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MerchantUtilitySoap12" type="tns:MerchantUtilitySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="CheckRequestStatusWithRealTransactionDateTime">
+      <soap12:operation soapAction="http://tempuri.org/CheckRequestStatusWithRealTransactionDateTime" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatus">
+      <soap12:operation soapAction="http://tempuri.org/CheckRequestStatus" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusEx">
+      <soap12:operation soapAction="http://tempuri.org/CheckRequestStatusEx" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusExWithRealTransactionDateTime">
+      <soap12:operation soapAction="http://tempuri.org/CheckRequestStatusExWithRealTransactionDateTime" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRequestStatusResult">
+      <soap12:operation soapAction="http://tempuri.org/CheckRequestStatusWithResult" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestStatusResult">
+      <soap12:operation soapAction="http://tempuri.org/GetRequestStatusResult" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthRequestStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetAuthRequestStatus" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBatchTransferStatus">
+      <soap12:operation soapAction="http://tempuri.org/CheckBatchTransferStatus" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBillStatus">
+      <soap12:operation soapAction="http://tempuri.org/CheckBillStatus" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecificMerchantCommitReportByPageNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetSpecificMerchantCommitReportByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitReportByPageNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetCommitReportByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommitReport">
+      <soap12:operation soapAction="http://tempuri.org/GetCommitReport" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReport">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionReport" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReportByPageNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionReportByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionReportWithSettlementDateByPageNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionReportWithSatlementDateByPageNumber" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePaymentID">
+      <soap12:operation soapAction="http://tempuri.org/GeneratePaymentID" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePaymentID">
+      <soap12:operation soapAction="http://tempuri.org/ValidatePaymentID" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCheckDigit">
+      <soap12:operation soapAction="http://tempuri.org/GenerateCheckDigit" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtility">
+      <soap12:operation soapAction="http://tempuri.org/PaymentUtility" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtilityAdditionalData">
+      <soap12:operation soapAction="http://tempuri.org/PaymentUtilityAdditionalData" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PaymentUtilityOptionalParameter">
+      <soap12:operation soapAction="http://tempuri.org/PaymentUtilityOptionalParameter" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillPaymentUtility">
+      <soap12:operation soapAction="http://tempuri.org/BillPaymentUtility" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchTransferUtility">
+      <soap12:operation soapAction="http://tempuri.org/BatchTransferUtility" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcTimeStamp">
+      <soap12:operation soapAction="http://tempuri.org/CalcTimeStamp" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MerchantUtility">
+    <wsdl:port name="MerchantUtilitySoap" binding="tns:MerchantUtilitySoap">
+      <soap:address location="https://sadad.shaparak.ir/merchantutility.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MerchantUtilitySoap12" binding="tns:MerchantUtilitySoap12">
+      <soap12:address location="https://sadad.shaparak.ir/merchantutility.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RequestOperation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantConfigurationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestOperationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestOperationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestReconciliation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantConfigurationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedCredentials" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="payGateTranID" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestReconciliationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestReconciliationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantConfigurationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedCredentials" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="payGateTranID" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestVerificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantConfigurationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedCredentials" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="payGateTranID" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestReversalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrxStatusFromLocalInvoiceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantConfigurationID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="encryptedCredintials" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="localInvoiceID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrxStatusFromLocalInvoiceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrxStatusFromLocalInvoiceIDResult" type="tns:TransactionDataPackage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransactionDataPackage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FetchResult" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionList" type="tns:ArrayOfTransactionStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTransactionStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TransactionStatus" nillable="true" type="tns:TransactionStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TransactionStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EMerchantConfigID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocalInvoiceID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperationRequestDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantLocalDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestedAmountInRials" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalData" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServiceTypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CallbackURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayGateTranID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualTrxAmount" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrxResultCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MainTrxWasSuccessful" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="RRN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsVerified" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="VerifyRequestDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReconcilationSucceeded" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReconcilationRequestDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsReconcilationRequestedAutomatically" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReconcilationTryDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReversalSucceeded" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReversalRequestDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsReversalRequestedAutomatically" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReversalTryDate" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestOperationSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestOperation" />
+  </wsdl:message>
+  <wsdl:message name="RequestOperationSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestReconciliationSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestReconciliation" />
+  </wsdl:message>
+  <wsdl:message name="RequestReconciliationSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestReconciliationResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestVerification" />
+  </wsdl:message>
+  <wsdl:message name="RequestVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestReversal" />
+  </wsdl:message>
+  <wsdl:message name="RequestReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrxStatusFromLocalInvoiceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:TrxStatusFromLocalInvoiceID" />
+  </wsdl:message>
+  <wsdl:message name="TrxStatusFromLocalInvoiceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:TrxStatusFromLocalInvoiceIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="merchantservicesSoap">
+    <wsdl:operation name="RequestOperation">
+      <wsdl:input message="tns:RequestOperationSoapIn" />
+      <wsdl:output message="tns:RequestOperationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestReconciliation">
+      <wsdl:input message="tns:RequestReconciliationSoapIn" />
+      <wsdl:output message="tns:RequestReconciliationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestVerification">
+      <wsdl:input message="tns:RequestVerificationSoapIn" />
+      <wsdl:output message="tns:RequestVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestReversal">
+      <wsdl:input message="tns:RequestReversalSoapIn" />
+      <wsdl:output message="tns:RequestReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrxStatusFromLocalInvoiceID">
+      <wsdl:input message="tns:TrxStatusFromLocalInvoiceIDSoapIn" />
+      <wsdl:output message="tns:TrxStatusFromLocalInvoiceIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="merchantservicesSoap" type="tns:merchantservicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestOperation">
+      <soap:operation soapAction="http://tempuri.org/RequestOperation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestReconciliation">
+      <soap:operation soapAction="http://tempuri.org/RequestReconciliation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestVerification">
+      <soap:operation soapAction="http://tempuri.org/RequestVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestReversal">
+      <soap:operation soapAction="http://tempuri.org/RequestReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrxStatusFromLocalInvoiceID">
+      <soap:operation soapAction="http://tempuri.org/TrxStatusFromLocalInvoiceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="merchantservicesSoap12" type="tns:merchantservicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestOperation">
+      <soap12:operation soapAction="http://tempuri.org/RequestOperation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestReconciliation">
+      <soap12:operation soapAction="http://tempuri.org/RequestReconciliation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestVerification">
+      <soap12:operation soapAction="http://tempuri.org/RequestVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestReversal">
+      <soap12:operation soapAction="http://tempuri.org/RequestReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrxStatusFromLocalInvoiceID">
+      <soap12:operation soapAction="http://tempuri.org/TrxStatusFromLocalInvoiceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="merchantservices">
+    <wsdl:port name="merchantservicesSoap" binding="tns:merchantservicesSoap">
+      <soap:address location="https://services.asanpardakht.net/paygate/merchantservices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="merchantservicesSoap12" binding="tns:merchantservicesSoap12">
+      <soap12:address location="https://services.asanpardakht.net/paygate/merchantservices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
